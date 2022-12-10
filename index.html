@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation Project</title>
+</head>
+<style>
+    *{
+        margin: 0px;
+        padding: 0px;
+    }
+    .nature{
+        position: relative;
+        top: 50px;
+        width: 100%;
+        height: 80vh;
+        background-image: url(IXxHHzD.jpg);
+        background-size: 100% 100%;
+        overflow: hidden;
+    }
+    .bird{
+        position: absolute;
+        top: 3%;
+        width: 10%;
+        height: 10vh;
+        left: -10%;
+        background-image: url(1663288.gif);
+        background-size: 100% 100%;
+        animation-name: birdfly;
+        animation-duration: 7s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        /* animation-direction: reverse; */
+        animation-delay:2s;
+        z-index: 1;
+    }
+    .two{
+        top: 20%;
+        animation-duration:10s;
+    }
+    @keyframes birdfly{
+        100%{
+            left: 100%;
+        }
+    }
+    .ball{
+        position: absolute;
+        width: 4%;
+        height: 10%;
+        left: 0%;
+        background-image: url(2-26320_free-football-clipart-free-clipart-images-graphics-football.png);
+        background-size:100% 100%;
+        bottom: 10px;
+        animation-name: football;    
+        animation-duration: 4s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-fill-mode: backwards;
+    }
+    @keyframes football{
+        0%{
+            left: 20%;
+            transform: rotate(0deg);
+        }
+        25%{
+            bottom: 100px;
+            left: 50%;
+            transform: rotate(90deg);
+        }
+        50%{
+            bottom: 10px;
+            left: 80%;
+            transform: rotate(180deg); 
+        }
+        75%{
+            bottom: 100px;
+            left: 50%;
+            transform: rotate(270deg);
+        }
+        100%{
+            bottom: 10px;
+            left: 20%;
+            transform: rotate(360deg); 
+        }
+    }
+    .boat{
+        position: absolute;
+        top: 240px;
+        width: 20%;
+        height: 20%;
+        left: 100%;
+        background-size: 100% 100%;
+        background-image: url(901e2e044c6fd544abc56f2a5aadad11_w200.gif);
+        animation-name: boatflow;
+        animation-duration: 10s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+    @keyframes boatflow{
+        100%{
+            left: -25%;
+        }
+    }
+    .plane{
+        position: absolute;
+        width: 10%;
+        height: 10%;
+        left: 100%;
+        top: 25%;
+        background-image: url(plane_PNG101266.png);
+        background-size: 100% 100%;
+        transform: rotate(-5deg);
+        animation-name: planefly;
+        animation-duration: 10s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-delay: 2s;
+    }
+    @keyframes planefly{
+        50%{
+            top: 15%;
+            transform: scale(0.5);
+        }
+        100%{
+            top: 0%;
+            left: -20%;
+            transform: scale(0);
+        }
+    }
+    .butterfly{
+        position: absolute;
+        width: 10%;
+        height: 10%;
+        top: 45%;
+        background-image: url(d70b9bcf575f8ca592c19a7685b86920.gif);
+        background-size: 100% 100%;
+        left: 100%;
+        transform: rotate(-40deg);
+        animation-name: butterflot;
+        animation-duration: 8s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+    @keyframes butterflot{
+        25%{
+            top: 80%;
+            left: 75%;
+            animation-delay: 2s;
+        }
+        50%{
+            top: 55%;
+            left: 50%;
+        }
+        75%{
+            top: 55%;
+            left: 20%;
+        }
+        90%{
+            top: 80%;
+            left: 0%;
+        }
+        100%{
+            top: 80%;
+            left: -10%;
+        }
+    }
+    .walkright{
+        position: absolute;
+        width: 10%;
+        height: 30%;
+        left: 90%;
+        bottom: 0%;
+        background-image: url(po.gif);
+        background-size: 100% 100%;
+        animation: walkboyright;
+        animation-duration: 2s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+    }
+    @keyframes walkboyright{
+        100%{
+            left: 80%;
+        }
+    }
+    .walkleft{
+        position: absolute;
+        width: 10%;
+        height: 35%;
+        left: 15%;
+        bottom: 0%;
+        background-image: url(e8b66259686cf51f6a914e3bd93890ff.gif);
+        background-size: 100% 100%;
+        animation: walkboyleft;
+        animation-duration: 2s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+    }
+    @keyframes walkboyleft{
+        100%{
+            left: 0%;
+        }
+    }
+</style>
+<body>
+    <div class="nature" >
+        <div class="bird"></div>
+        <div class="bird two"></div>
+        <div class="ball"></div>
+        <div class="boat"></div>
+        <div class="plane"></div>
+        <div class="butterfly"></div>
+        <div class="walkright"></div>
+        <div class="walkleft"></div>
+    </div>
+</body>
+</html>
